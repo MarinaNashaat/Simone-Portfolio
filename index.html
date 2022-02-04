@@ -8,52 +8,102 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800;900&display=swap"
         rel="stylesheet">
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="plugins/OwlCarousel2-2.3.4/css/owl.carousel.min.css">
+    <link rel="stylesheet" href="plugins/OwlCarousel2-2.3.4/css/owl.theme.default.min.css">
+
     <link rel="stylesheet" href="css/all.min.css">
     <link rel="stylesheet" href="css/style.css">
 </head>
 
 <body>
     <!-- Header part Start -->
-    <header>
-        <nav class="navbar">
-            <div class="navbar-content">
-                <div class="logo">
-                    <a href="index.html">
-                        <img src="images/logo-light.png" alt="logo">
-                    </a>
-                </div>
-                <ul>
-                    <li><a href="" class="active-link">Home</a></li>
-                    <li><a href="">About</a></li>
-                    <li><a href="">What I Do</a></li>
-                    <li><a href="">Resume</a></li>
-                    <li><a href="">Portfolio</a></li>
-                    <li><a href="">Client</a></li>
-                    <li><a href="">Contact</a></li>
+    <nav id="main-nav" class="navbar navbar-expand-lg fixed-top">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="index.html">
+                <img src="images/logo-light.png" alt="logo">
+
+            </a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
+                data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+                aria-label="Toggle navigation">
+                <span></span>
+                <span></span>
+                <span></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mb-2 mb-lg-0 mx-auto">
+                    <li class="nav-item">
+                        <a class="nav-link active-link" aria-current="page" href="#home">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#about">About</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#services">What I Do</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#resume">Resume</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#portfolio">Portfolio</a>
+                    </li>
+
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#feedback">Client</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" aria-current="page" href="#contact">Contact</a>
+                    </li>
+
                 </ul>
 
-
             </div>
-        </nav>
-    </header>
+        </div>
+    </nav>
+
+
     <!-- Header part End -->
 
     <!-- Main part Start -->
-    <div class="main-sec">
-        <button class="right-btn">
-            <i class="fas fa-cog"></i>
-        </button>
+    <div id="home" class="main-sec">
+        <div class="color-box d-flex">
+            <button id="colorBtn" class="right-btn">
+                <i class="fas fa-cog"></i>
+            </button>
+            <div class="inner-box bg-light shadow">
+                <h2>Choose color</h2>
+                <hr>
+                <ul>
+                    <li class="color" style="background-color: #6610f2; border:1px solid #570bd3;"></li>
+                    <li class="color" style="background-color: #007bff;border: 1px solid #025de4;"></li>
+                    <li class="color" style="background-color: #dc3545;;border: 1px solid #ca2333;"></li>
+                    <li class="color" style="background-color: #e83e8c;;border: 1px solid #d63384;"></li>
+                    <li class="color" style="background-color: #6f42c1;;border: 1px solid #5f37a8;"></li>
+                    <li class="color" style="background-color: #28a745;;border: 1px solid #218a39;"></li>
+                    <li class="color" style="background-color: #ffc107;;border: 1px solid #f7b900;"></li>
+                    <li class="color" style="background-color: #17a2b8;;border: 1px solid #0badce;"></li>
+                    <li class="color" style="background-color: #fd7e14;;border: 1px solid #eb6c02;"></li>
+                    <li class="color" style="background-color: #795548;;border: 1px solid #63453b;"></li>
+                </ul>
+                <button id="reset" class="btn-dark w-100 fw-400 rounded-0 shadow-none mt-2">Reset default theme</button>
+            </div>
+          
+        </div>
+      
         <div class="main-container">
             <div class="main-content">
                 <p class="welcome-text"> Welcome</p>
-                <h1>I'm Simone Olivia </h1>
+                <h1>
+                    <span id="typed"></span>
+                </h1>
                 <p class="based-text">based in Los Angeles, California. </p>
                 <button class="hire-btn btn">Hire Me </button>
 
             </div>
 
         </div>
-        <a class="scroll-btn">
+        <a id="scrollDown" class="scroll-btn" href="#about">
             <span class="span-down">
                 <i class="fas fa-chevron-down"></i>
             </span>
@@ -62,7 +112,7 @@
     <!-- Main part End -->
 
     <!-- Who We Are Start -->
-    <section class="who-we-are">
+    <section id="about" class="who-we-are">
         <div class="body-container">
             <div class="all-sec-header">
                 <h2 class="all-h2">ABOUT ME</h2>
@@ -110,19 +160,29 @@
             </div>
             <div class="about-counter">
                 <div class="counter-box counter-fst-child">
-                    <h4>10+ </h4>
+                    <h4>
+                        <span class="counter">10</span>
+                        +
+                    </h4>
+
                     <p>Years Experiance </p>
                 </div>
                 <div class="counter-box">
-                    <h4>250+ </h4>
+                    <h4>
+                        <span class="counter">250</span>
+                        +
+                    </h4>
                     <p>Happy Clients</p>
                 </div>
                 <div class="counter-box">
-                    <h4>650+</h4>
+                    <h4>
+                        <span class="counter">650</span>
+                        +
+                    </h4>
                     <p>Projects Done</p>
                 </div>
                 <div class="counter-box">
-                    <h4>38</h4>
+                    <h4 class="counter">38</h4>
                     <p>Get Awards </p>
                 </div>
             </div>
@@ -131,7 +191,7 @@
     <!-- Who We Are End -->
 
     <!-- What We Do Start -->
-    <section class="what-we-do gy-bg">
+    <section id="services" class="what-we-do gy-bg">
         <div class="body-container">
             <div class="all-sec-header">
                 <h2 class="all-h2">SERVICES</h2>
@@ -192,7 +252,7 @@
     <!-- What We Do End -->
 
     <!-- Resume Start -->
-    <section class="our-resume">
+    <section id="resume" class="our-resume">
         <div class="body-container">
             <div class="all-sec-header">
                 <h2 class="all-h2">SUMMARY</h2>
@@ -311,164 +371,244 @@
     <!-- Resume End -->
 
     <!-- Portfolio Start -->
-    <section class="our-portfolio gy-bg">
+
+    <section id="portfolio" class="our-portfolio gy-bg">
         <div class="body-container">
             <div class="all-sec-header">
                 <h2 class="all-h2">PORTFOLIO</h2>
                 <p class="all-text">My Work</p>
             </div>
-            <ul class="portfolio-list">
-                <li><a href="" class="port-active-link">All</a></li>
-                <li><a href="">Design</a></li>
-                <li><a href="">Brand</a></li>
-                <li><a href="">Photos</a></li>
+            <ul class="portfolio-list filter">
+                <li class="filter-item"><a class="filter-link port-active-link" data-filter="*">All</a></li>
+                <li class="filter-item"><a class="filter-link" data-filter=".design">Design</a></li>
+                <li class="filter-item"><a class="filter-link" data-filter=".brand">Brand</a></li>
+                <li class="filter-item"><a class="filter-link" data-filter=".photos">Photos</a></li>
             </ul>
-            <div class="portfolio-container">
-                <div class="proj-outer">
-                    <div class="portfolio-content">
-                        <div class="portfolio-inner-content">
-                            <img src="images/projects/project-1.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-overlay-details">
-                                    <h5 class="proj-title">Project Title</h5>
-                                    <span class="proj-cat">Category</span>
-                                </div>
+            <div class="container">
+                <div class="row portfolio-box-container g-4">
+                    <div class="col-lg-4 col-sm-6 portfolio-box brand">
+                        <div class="portfolio-content">
+                            <div class="portfolio-inner-content">
+                                <img src="images/projects/project-1.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-overlay-details">
+                                        <h5 class="proj-title">Project Title</h5>
+                                        <span class="proj-cat">Category</span>
+                                    </div>
 
-                            </div>
-                        </div>
-                    </div>
-                    <div class="portfolio-content">
-                        <div class="portfolio-inner-content">
-                            <img src="images/projects/project-4.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-overlay-details">
-                                    <h5 class="proj-title">Project Title</h5>
-                                    <span class="proj-cat">Category</span>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div>
-                <div class="proj-outer">
-                    <div class="portfolio-content">
-                        <div class="portfolio-inner-content">
-                            <img src="images/projects/project-2.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-overlay-details">
-                                    <h5 class="proj-title">Project Title</h5>
-                                    <span class="proj-cat">Category</span>
+                    <div class="col-lg-4 col-sm-6 portfolio-box design">
+                        <div class="portfolio-content">
+                            <div class="portfolio-inner-content">
+                                <img src="images/projects/project-2.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-overlay-details">
+                                        <h5 class="proj-title">Project Title</h5>
+                                        <span class="proj-cat">Category</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="portfolio-content">
-                        <div class="portfolio-inner-content">
-                            <img src="images/projects/project-7.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-overlay-details">
-                                    <h5 class="proj-title">Project Title</h5>
-                                    <span class="proj-cat">Category</span>
-                                </div>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <div class="proj-outer">
-
-
-                    <div class="portfolio-content">
-                        <div class="portfolio-inner-content">
-                            <img src="images/projects/project-3.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-overlay-details">
-                                    <h5 class="proj-title">Project Title</h5>
-                                    <span class="proj-cat">Category</span>
+                    <div class="col-lg-4 col-sm-6 portfolio-box photos">
+                        <div class="portfolio-content">
+                            <div class="portfolio-inner-content">
+                                <img src="images/projects/project-3.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-overlay-details">
+                                        <h5 class="proj-title">Project Title</h5>
+                                        <span class="proj-cat">Category</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
 
-                    <div class="portfolio-content">
-                        <div class="portfolio-inner-content">
-                            <img src="images/projects/project-5.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-overlay-details">
-                                    <h5 class="proj-title">Project Title</h5>
-                                    <span class="proj-cat">Category</span>
+                    <div class="col-lg-4 col-sm-6 portfolio-box brand photos">
+                        <div class="portfolio-content">
+                            <div class="portfolio-inner-content">
+                                <img src="images/projects/project-4.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-overlay-details">
+                                        <h5 class="proj-title">Project Title</h5>
+                                        <span class="proj-cat">Category</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
-                    <div class="portfolio-content">
-                        <div class="portfolio-inner-content">
-                            <img src="images/projects/project-6.jpg" alt="">
-                            <div class="portfolio-overlay">
-                                <div class="portfolio-overlay-details">
-                                    <h5 class="proj-title">Project Title</h5>
-                                    <span class="proj-cat">Category</span>
+
+                    <div class="col-lg-4 col-sm-6 portfolio-box design">
+                        <div class="portfolio-content">
+                            <div class="portfolio-inner-content">
+                                <img src="images/projects/project-5.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-overlay-details">
+                                        <h5 class="proj-title">Project Title</h5>
+                                        <span class="proj-cat">Category</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 portfolio-box brand">
+                        <div class="portfolio-content">
+                            <div class="portfolio-inner-content">
+                                <img src="images/projects/project-6.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-overlay-details">
+                                        <h5 class="proj-title">Project Title</h5>
+                                        <span class="proj-cat">Category</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-lg-4 col-sm-6 portfolio-box design photos">
+                        <div class="portfolio-content">
+                            <div class="portfolio-inner-content">
+                                <img src="images/projects/project-7.jpg" alt="">
+                                <div class="portfolio-overlay">
+                                    <div class="portfolio-overlay-details">
+                                        <h5 class="proj-title">Project Title</h5>
+                                        <span class="proj-cat">Category</span>
+                                    </div>
                                 </div>
                             </div>
                         </div>
                     </div>
                 </div>
             </div>
+
         </div>
     </section>
     <!-- Portfolio End -->
 
     <!-- Feedback Start -->
-    <section class="feedback-sec">
+    <section id="feedback" class="feedback-sec">
         <div class="body-container">
             <div class="all-sec-header">
                 <h2 class="all-h2">TESTIMONIAL</h2>
                 <p class="all-text">Client Speak</p>
             </div>
-            <div class="teste-container">
-                <div class="teste-content">
-                    <div class="client-info">
-                        <img src="images/testimonial/client-sm-3.jpg" alt="client-sm-1">
-                        <div class="info-txt">
-                            <p class="client-name">Dennis Jacques</p>
-                            <span class="client-title">User from USA</span>
+
+            <div class="container">
+                <div class="row">
+                    <div class="col-md-12">
+                        <div class="owl-carousel owl-theme owl-loaded">
+                            <div class="owl-stage-outer">
+                                <div class="owl-stage">
+                                    <div class="owl-item">
+                                        <div class="test-container">
+                                            <div class="client-info">
+                                                <img src="images/testimonial/client-sm-1.jpg"
+                                                    class="img-fluid rounded rounded-circle w-auto" alt="client-sm-1">
+                                                <div class="info-txt">
+                                                    <p class="client-name">Jay Shah</p>
+                                                    <span class="client-title">Founder at Icomatic Pvt Ltd</span>
+                                                </div>
+                                            </div>
+                                            <p class="teste-txt">
+                                                "Easy to use, reasonably priced simply dummy text of the printing and
+                                                typesetting industry. Quidam lisque persius interesset his et, in quot
+                                                quidam possim iriure.â€ </p>
+                                            <span class="teste-review">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="owl-item">
+                                        <div class="test-container">
+                                            <div class="client-info">
+                                                <img src="images/testimonial/client-sm-2.jpg"
+                                                    class="img-fluid rounded rounded-circle w-auto" alt="client-sm-1">
+                                                <div class="info-txt">
+                                                    <p class="client-name">Patrick Cary</p>
+                                                    <span class="client-title">Freelancer from USA</span>
+                                                </div>
+                                            </div>
+                                            <p class="teste-txt">
+                                                â€œI am happy Working with printing and typesetting industry. Quidam
+                                                lisque persius interesset his et, in quot quidam persequeris essent
+                                                possim iriure.â€</p>
+                                            <span class="teste-review">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="owl-item">
+                                        <div class="test-container">
+                                            <div class="client-info">
+                                                <img src="images/testimonial/client-sm-3.jpg"
+                                                    class="img-fluid rounded rounded-circle w-auto" alt="client-sm-1">
+                                                <div class="info-txt">
+                                                    <p class="client-name">Dennis Jacques</p>
+                                                    <span class="client-title">User from USA</span>
+                                                </div>
+                                            </div>
+                                            <p class="teste-txt">
+                                                â€œOnly trying it out since a few days. But up to now excellent. Seems
+                                                to work flawlessly. priced simply dummy text of the printing and
+                                                typesetting industry.â€
+                                            </p>
+                                            <span class="teste-review">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="owl-item">
+                                        <div class="test-container">
+                                            <div class="client-info">
+                                                <img src="images/testimonial/client-sm-4.jpg"
+                                                    class="img-fluid rounded rounded-circle w-auto" alt="client-sm-1">
+                                                <div class="info-txt">
+                                                    <p class="client-name">Chris Tom</p>
+                                                    <span class="client-title">User from UK</span>
+                                                </div>
+                                            </div>
+                                            <p class="teste-txt">
+                                                â€œI have used them twice now. Good rates, very efficient service and
+                                                priced simply dummy text of the printing and typesetting industry quidam
+                                                interesset his et. Excellent.â€
+                                            </p>
+                                            <span class="teste-review">
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                                <i class="fas fa-star"></i>
+                                            </span>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            
                         </div>
                     </div>
-                    <p class="teste-txt">
-                        "Easy to use, reasonably priced simply dummy text of the printing and typesetting industry.
-                        Quidam lisque persius interesset his et, in quot quidam possim iriure.â€ </p>
-                    <span class="teste-review">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </span>
-                </div>
-                <div class="teste-content">
-                    <div class="client-info">
-                        <img src="images/testimonial/client-sm-1.jpg" alt="client-sm-1">
-                        <div class="info-txt">
-                            <p class="client-name">Jay Shah</p>
-                            <span class="client-title">Founder at Icomatic Pvt Ltd</span>
-                        </div>
-                    </div>
-                    <p class="teste-txt">
-                        "Easy to use, reasonably priced simply dummy text of the printing and typesetting industry.
-                        Quidam lisque persius interesset his et, in quot quidam possim iriure.â€ </p>
-                    <span class="teste-review">
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                        <i class="fas fa-star"></i>
-                    </span>
                 </div>
             </div>
+
         </div>
     </section>
     <!-- Feedback End -->
 
     <!-- Contact Start -->
-    <section class="contact-us gy-bg">
+    <section id="contact" class="contact-us gy-bg">
         <div class="body-container">
             <div class="all-sec-header">
                 <h2 class="all-h2">CONTACT</h2>
@@ -574,6 +714,34 @@
         </div>
     </footer>
     <!-- Footer End -->
+
+    <!-- Loader page Start -->
+
+    <div id="loader">
+        <div class="lds-ellipsis">
+            <div></div>
+            <div></div>
+            <div></div>
+            <div></div>
+        </div>
+
+    </div>
+    <!-- Loader page End  -->
+
+    <!-- Scroll top btn Start -->
+    <button class="rounded-circle" id="topBtn">
+        <i class="fa fa-chevron-up"></i>
+    </button>
+    <!-- Scroll top btn End -->
+
+    <script src="js/jquery-3.6.0.min.js"></script>
+    <script src="js/bootstrap.bundle.min.js"></script>
+    <script src="plugins/counterUp/js/waypoints.min.js"></script>
+    <script src="plugins/counterUp/js/jquery.counterup.min.js"></script>
+    <script src="plugins/typed-JS/js/typed.min.js"></script>
+    <script src="plugins/Isotope/isotope.pkgd.min.js"></script>
+    <script src="plugins/OwlCarousel2-2.3.4/js/owl.carousel.min.js"></script>
+    <script src="js/main.js"></script>
 </body>
 
 </html>
